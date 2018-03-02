@@ -8,10 +8,13 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
+import 'babel-polyfill'
+
 import React, {PropTypes} from 'react';
 import s from './styles.css';
 import {title, html} from './index.md';
 import axios from 'axios';
+import Root from './../containers/Root'
 
 import history from '../history';
 class HomePage extends React.Component {
@@ -30,8 +33,8 @@ class HomePage extends React.Component {
   render() {
     return (
       <div className={s.container}>
-        <div dangerouslySetInnerHTML={{__html: html}}/>
-        <button onClick = {()=>{this.gotToYelpCloneExample()}}>Check Out Yelp Clone Example</button>
+        <div> testing here we go!! </div>
+          <Root />
       </div>
     );
   }

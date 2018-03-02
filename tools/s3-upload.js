@@ -10,9 +10,9 @@ module.exports = task('upload', () => Promise.resolve()
 const Uploader = new Promise((resolve, reject) => {
   const client = s3.createClient({
   s3Options: {
-      accessKeyId: 'YOUR_AWS_ACCESS_KEY',
-      secretAccessKey: 'YOUR_AWS_SECRET_KEY',
-      region: 'us-west-2',
+      accessKeyId: 'catscatscats',
+      secretAccessKey: 'catscatscats',
+      region: 'us-east-1',
       sslEnabled: true,
     },
   });
@@ -20,7 +20,7 @@ const Uploader = new Promise((resolve, reject) => {
     localDir: 'public/',
     deleteRemoved: true,
     s3Params: {
-      Bucket: 'YOUR_BUCKET_NAME'
+      Bucket: 'catscats'
     },
   });
   uploader.on('error', reject);
